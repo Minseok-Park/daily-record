@@ -1,0 +1,10 @@
+.header {
+  width: 100%;
+  text-align: center;
+  background-color: lightyellow;
+  padding: 0.6em;
+  border-bottom: 1px solid lightgrey;
+}
+.title {
+  margin: 0;
+}
