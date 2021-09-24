@@ -2,9 +2,23 @@
   width: 100%;
   text-align: center;
   background-color: lightyellow;
-  padding: 0.6em;
+  padding: 0.8em;
   border-bottom: 1px solid lightgrey;
+  position: relative;
 }
 .title {
   margin: 0;
+}
+.logout {
+  position: absolute;
+  right: 1em;
+  top: 0.8em;
+  padding: 0.5em;
+  font-size: 1rem;
+  border-radius: 1.5rem;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: black;
+  color: white;
 }

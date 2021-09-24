@@ -1,0 +1,20 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.file {
+  display: none;
+}
+.button {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(148, 174, 231);
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
