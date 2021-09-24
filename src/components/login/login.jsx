@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import sytles from "./login.module.css";
 import Header from "../header/header";
 import Footer from "../footer/footer";
+import { useHistory } from "react-router";
 
 const Login = ({ authService }) => {
+  const history = useHistory();
+
+  const goToDaily = (userId) => {
+    history.push({
+      pathname: "/daily",
+      state: {
+        id: userId,
+      },
+    });
+  };
+
   const onLogin = (event) => {
     const text = event.currentTarget.innerText;
-    authService.login(text);
+    authService.login(text).then((result) => goToDaily(result.user.uid));
   };
+
+  useEffect(() => {
+    authService.onAuthChange((user) => {
+      user && goToDaily(user.uid);
+    });
+  });
   return (
     <section className={sytles.login}>
       <Header />
