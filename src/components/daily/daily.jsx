@@ -22,12 +22,23 @@ const Daily = ({ authService }) => {
     });
   }, [authService, history]);
 
+  const createDailyCard = (dailyCard) => {
+    setDailyCards((dailyCards) => {
+      const updateCard = { ...dailyCards };
+      updateCard[dailyCard.id] = dailyCard;
+      return updateCard;
+    });
+  };
+
   return (
     <section className={styles.daily}>
       <Header onLogout={onLogout} />
       <div className={styles.container}>
         <DailyList dailyCards={dailyCards} />
-        <DailyEditor dailyCards={dailyCards} />
+        <DailyEditor
+          dailyCards={dailyCards}
+          createDailyCard={createDailyCard}
+        />
       </div>
       <Footer />
     </section>

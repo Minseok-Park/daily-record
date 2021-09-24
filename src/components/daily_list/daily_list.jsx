@@ -15,7 +15,7 @@ const DailyList = ({ dailyCards }) => {
 
       <ul className={styles.cards}>
         {Object.keys(dailyCards).map((key) => (
-          <DailyCard key={key} cards={dailyCards[key]} />
+          <DailyCard key={key} card={dailyCards[key]} />
         ))}
       </ul>
     </section>
